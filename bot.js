@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "g!";
+const prefix = "2";
 /////////////////////////
 ////////////////////////
 
@@ -317,6 +317,21 @@ function play(guild, song) {
 }
 });
 
+client.user.setActivity("2play #By:Mal Team",{type: 'WATCHING'}); });
+client.on('message', msg => {
+
+    if (msg.content == '2join') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("526434295099686924").join(); 
+    });
 
 
 
