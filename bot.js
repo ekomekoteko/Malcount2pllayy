@@ -317,7 +317,6 @@ function play(guild, song) {
 }
 });
 
-client.user.setActivity("2play #By:Mal Team",{type: 'WATCHING'}); });
 client.on('message', msg => {
 
     if (msg.content == '2join') {
